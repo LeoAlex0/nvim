@@ -6,6 +6,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'tomasr/molokai'
 
+Plug 'jreybert/vimagit'
+
+Plug 'edkolev/tmuxline.vim'
+
+Plug 'jmcantrell/vim-virtualenv'
+
 call plug#end()
 
 " 该死的文件编码问题
