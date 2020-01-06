@@ -1,0 +1,29 @@
+{
+"languageserver": {
+  "haskell": {
+    "command": "stack",
+    "args" : ["exec","hie-wrapper"],
+    "rootPatterns": [
+      "stack.yaml",
+      "cabal.config",
+      "package.yaml"
+    ],
+    "filetypes": [
+      "hs",
+      "lhs",
+      "haskell"
+    ],
+    "initializationOptions": {
+      "languageServerHaskell": {
+        "hlintOn": true
+      }
+    }
+  },
+  "clangd" : {
+      "command": "clangd",
+      "args": ["--background-index"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+  }
+}
+}
