@@ -2,7 +2,7 @@
 "languageserver": {
   "haskell": {
     "command": "stack",
-    "args" : ["exec","hie-wrapper"],
+    "args" : ["exec","hie-wrapper","--","--lsp"],
     "rootPatterns": [
       "stack.yaml",
       "cabal.config",
