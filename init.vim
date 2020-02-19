@@ -30,4 +30,13 @@ set rnu
 syntax on
 colorscheme molokai
 
+" Quick Fix (就是JetBrains那套里的Alt+Enter)
 nmap <M-CR> :CocFix <CR>
+
+" C/C++文件自动保存时使用clang-format格式化
+function OnCPPBufSavePost()
+    !clang-format % -i
+    e
+endfunction
+autocmd BufWritePost *.cpp,*.cc,*.c,*.hpp,*.h silent! call OnCPPBufSavePost()
+
