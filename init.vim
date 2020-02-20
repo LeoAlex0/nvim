@@ -40,3 +40,7 @@ function OnCPPBufSavePost()
 endfunction
 autocmd BufWritePost *.cpp,*.cc,*.c,*.hpp,*.h silent! call OnCPPBufSavePost()
 
+" 使用<Tab>选择补全候选项
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" 使用<CR>确认补全候选项
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
