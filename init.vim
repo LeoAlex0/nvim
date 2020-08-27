@@ -8,7 +8,7 @@ Plug 'tomasr/molokai'
 
 Plug 'jreybert/vimagit'
 
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 
 Plug 'jmcantrell/vim-virtualenv'
 
@@ -38,7 +38,7 @@ function OnCPPBufSavePost()
     !clang-format % -i
     e
 endfunction
-autocmd BufWritePost *.cpp,*.cc,*.c,*.hpp,*.h silent! call OnCPPBufSavePost()
+autocmd BufWritePost * silent! call CocAction('format')
 
 " 使用<Tab>选择补全候选项
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
